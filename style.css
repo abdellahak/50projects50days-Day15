@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+}
+
+main{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#containerSocialMedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.cardSocial{
+    padding: 25px 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #EFF2F9;
+    min-height: 250px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.cardSocial::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #cecece;
+    transition: height 0.3s ease;
+}
+.cardSocial:hover::after{
+    height: 0px;
+}
+.cardSocial:hover{
+    transform: scale(1.1);
+}
+#youtube::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #FF0000;
+    transition: 0.3s ease;
+}
+#youtube:hover::before{
+    height: 10px;
+}
+
+#twitter::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #1DA1F2;
+}
+
+#facebook::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #4267B2;
+}
+
+.count{
+    font-size: 2rem;
+    margin-block: 15px;
+}
+
+.icon{
+    font-size: 4rem;
+}
+
+#twitter .icon{
+    color: #1DA1F2;
+}
+#facebook .icon{
+    color: #4267B2;
+}
+#youtube .icon{
+    color: #FF0000;
+}
+.followers{
+    font-weight: light;
+    letter-spacing: 2px;
+}
